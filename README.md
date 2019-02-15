@@ -20,9 +20,8 @@ and predict the outcome of a game by using the previous statistics of the NBA ga
   </ul>
   I will use these three tables to assess the team's past combat effectiveness, as well as the game data for each of the 2016-2017 NBA regular season and playoff games in the 2015-16 NBA Schedule and Results. Elo score (explained in the experimental section that follows). Follow the time from the regular season to the playoffs in Basketball Reference.com. Listed the matches for each game from October 2016 to June 2017.
   </p>
- <h2>Data Analysis
-  <p>After obtaining the data, I will use each team's past game situation and Elo rating to determine the winning probability of each team. In evaluating the past matches of each team, I will use the data from the three tables of Team Per Game Stats, Opponent Per Game Stats and Miscellaneous Stats (hereafter referred to as T, O and M tables) as representative of the game. The characteristics of a team's game. We will eventually achieve each game and predict which team will win in the game, but it will not give an absolute victory or defeat, but the probability of winning the team. So we will build a feature vector that represents the game. The statistics of the previous match statistics (T, O and M tables) of the two teams and the respective Elo ranks of the two teams.
-  </p></h2>
+ <h2>Data Analysis</h2>
+  After obtaining the data, I will use each team's past game situation and Elo rating to determine the winning probability of each team. In evaluating the past matches of each team, I will use the data from the three tables of Team Per Game Stats, Opponent Per Game Stats and Miscellaneous Stats (hereafter referred to as T, O and M tables) as representative of the game. The characteristics of a team's game. We will eventually achieve each game and predict which team will win in the game, but it will not give an absolute victory or defeat, but the probability of winning the team. So we will build a feature vector that represents the game. The statistics of the previous match statistics (T, O and M tables) of the two teams and the respective Elo ranks of the two teams.
 <h2>Model training and prediction based on data</h2>
 In this lab environment, I will use python's pandas, numpy, scipy and sklearn libraries.
   
