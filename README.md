@@ -5,6 +5,7 @@ In addition to watching the exciting game, I want to try to judge the combat eff
 and predict the outcome of a game by using the previous statistics of the NBA game.</p>
 <h2>Built With<h2>
   <ul>
-    <li>Python 3.7</li>
-    <li>Sklearn 0.20.0</li>
+    <li><p>Python 3.7</p></li>
+    <li><p>Sklearn 0.20.0</p></li>
     </ul>
+ <h2>NBA game statistics gathering</h2>
