@@ -9,4 +9,11 @@ and predict the outcome of a game by using the previous statistics of the NBA ga
     <li><p><frot size =1>Sklearn 0.20.0</p></li>
     </ul>
  <h2>NBA game statistics gathering</h2>
-  <p>In this lab, we will use the statistics from Basketball Reference.com. In this website, you can see basic statistics of different players, teams, seasons and league games, such as scores, number of fouls, etc., the number of wins and so on. And we will use the data in the 2015-16 NBA Season Summary here.</p>
+  <p>In this lab, we will use the statistics from Basketball Reference.com. In this website, you can see basic statistics of different players, teams, seasons and league games, such as scores, number of fouls, etc., the number of wins and so on. And we will use the data in the 2016-17 NBA Season Summary here.</p>
+  <p>在这个 2016-17总结的所有表格中，我们将使用的是以下三个数据表格：
+  <ul>
+  <li>Team Per Game Stats</li>
+    <li>Opponent Per Game Stats</li>
+    <li>Miscellaneous Stats</li>
+  </ul>
+  </p>
