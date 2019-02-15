@@ -5,9 +5,9 @@ In addition to watching the exciting game, I want to try to judge the combat eff
 and predict the outcome of a game by using the previous statistics of the NBA game.</p>
 <h2>Built With<h2>
   <ul>
-    <li><p><frot size =1>Python 3.7</p></li>
-    <li><p><frot size =1>Sklearn 0.20.0</p></li>
-    </ul></p>
+    <li>Python 3.7</li>
+    <li>Sklearn 0.20.0</li>
+    </ul>
  <h2>NBA game statistics gathering</h2>
     In this lab, I will use the statistics from Basketball Reference.com. In this website, you can see basic statistics of different players, teams, seasons and league games, such as scores, number of fouls, etc., the number of wins and so on. And we will use the data in the 2016-17 NBA Season Summary here.</p>
   <p>In all the tables summarized in 2016-17, we will use the following three data tables:
