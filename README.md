@@ -41,22 +41,22 @@ from sklearn import linear_model<br />
 </p>
 <h3>Get the Elo Score rating function for each team, and Define the Elo grade function for each team</h3>
 <p>assign it to the initial base_elo value when there is no rating at the beginning.
-def GetElo(team):
-&nbsp    try:
-&nbsp        return team_elos[team]
-&nbsp    except:
-&nbsp        team_elos[team] = init_elo
-&nbsp    return team_elos[team]
-def CalcElo(winteam, loseteam):
-&nbsp    R1 = GetElo(winteam)
-&nbsp   R2 = GetElo(loseteam)
-&nbsp    E1 = 1/(1 + math.pow(10,(R2 - R1)/400))
-&nbsp    E2 = 1/(1 + math.pow(10,(R1 - R2)/400))   
-&nbsp    if R1>=2400:K=16
-&nbsp    elif R1<=2100:K=32
-&nbsp    else: K=24
-&nbsp    R1new = round(R1 + K*(1 - E1))
-&nbsp    R2new = round(R2 + K*(0 - E2))
+def GetElo(team):<br />
+&nbsp    try:<br />
+&nbsp        return team_elos[team]<br />
+&nbsp    except:<br />
+&nbsp        team_elos[team] = init_elo<br />
+&nbsp    return team_elos[team]<br />
+def CalcElo(winteam, loseteam):<br />
+&nbsp    R1 = GetElo(winteam)<br />
+&nbsp   R2 = GetElo(loseteam)<br />
+&nbsp    E1 = 1/(1 + math.pow(10,(R2 - R1)/400))<br />
+&nbsp    E2 = 1/(1 + math.pow(10,(R1 - R2)/400)) <br />  
+&nbsp    if R1>=2400:K=16<br />
+&nbsp    elif R1<=2100:K=32<br />
+&nbsp    else: K=24<br />
+&nbsp    R1new = round(R1 + K*(1 - E1))<br />
+&nbsp    R2new = round(R2 + K*(0 - E2))<br />
 &nbsp    return R1new, R2new
 </p>
 
