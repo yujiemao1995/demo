@@ -98,6 +98,17 @@ def CalcElo(winteam, loseteam):<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppredictlist.append(reslt)<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp print(predictlist) <br />   
 </p>
+<h3>Test Code</h3>
+<p>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsppre_data = pd.read_csv(folder + '/test_Scheduledata')<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp test_pre_X = GeneratePredictData(test_pre_data, test_teamstat)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  test_pre_y = limodel.predict_proba(pre_X)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  test_predictlist = []<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp for index, rows in test_pre_data.iterrows():<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptest_reslt = [rows['Vteam'], test_pre_y[index][0], rows['Hteam'], test_pre_y[index][1]]<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptest_predictlist.append(test_reslt)<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp print(test_predictlist) <br />   
+</p>
 <h2>In conclusion</h2>
 <p>I use some of the statistics of Basketball-reference.com to calculate Elo socre for each NBA team, and use these basic statistics to evaluate each team's past matches, and to use the Elo Score to fight the team according to the international ranking method. Grading the grades, and finally combining the characteristics of these different teams to determine which team can take advantage in a game. But in my predictions, unlike the past, I did not give the absolute positive and negative points, but the probability that the team with the larger odds can win the other party.<br />
 However, the amount of data I use to evaluate the performance of a team is still too small (only 15 to 16 years of data is used). If you want more accurate and systematic judgment, you can get it from various statistical websites. More years, more comprehensive data.<br />
