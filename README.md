@@ -23,8 +23,6 @@ and predict the outcome of a game by using the previous statistics of the NBA ga
 <h2>What is the Elo rating system</h2>
 <p>Elo originally designed to better grade different players in order to provide chess. In many competitive sports or games, the Elo rating system is used to classify players or players, such as football, basketball, baseball games or LOL, DOTA and other games.<br />
 The Elo rating system calculates the formula for calculating the expected win rate of each of the PK sides (A and B) based on the Logistic Distribution.<br />
-Assume that the current levels of A and B are divided into RA and RB，The expected win rate of A to B is:
-  ![image](https://github.com/yujiemao1995/demo/blob/master/image/EA.png)
 </p>
 <h2>Model training and prediction based on data</h2>
 In this lab environment, I will use python's pandas, numpy, scipy and sklearn libraries.
