@@ -61,13 +61,13 @@ def CalcElo(winteam, loseteam):<br />
 </p>
 <h3>Based on our initial good statistics and the Elo score calculation results of each team, we will establish a data set corresponding to each game in the 2015~2016 regular season (in the home and away games, we think the home team is more advantageous). Therefore, the home team will be given a corresponding rating of 100)</h3>
 <p>
-  def GenerateTrainData(stat, trainresult):
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspX = []
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspy = []
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  for index, rows in trainresult.iterrows():
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        winteam = rows['WTeam']
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseteam = rows['LTeam']
-   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       winelo = GetElo(winteam)
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseelo = GetElo(loseteam)
+  def GenerateTrainData(stat, trainresult):<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspX = []<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspy = []<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  for index, rows in trainresult.iterrows():<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        winteam = rows['WTeam']<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseteam = rows['LTeam']<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       winelo = GetElo(winteam)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseelo = GetElo(loseteam)<br />
 </p>
   
