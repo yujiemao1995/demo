@@ -103,4 +103,3 @@ def CalcElo(winteam, loseteam):<br />
 However, the amount of data I use to evaluate the performance of a team is still too small (only 15 to 16 years of data is used). If you want more accurate and systematic judgment, you can get it from various statistical websites. More years, more comprehensive data.<br />
 In addition, because each team has player trades and injuries every year, especially the changes of star players may greatly affect the entire team's Elo Score, which is difficult for us to predict.<br /></p>
 
-<p><math><semantics><mrow><msub><mi>R</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">R_A</annotation></semantics></math>RA and <math><semantics><mrow><msub><mi>R</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">R_B</annotation></semantics></math>RB</p>
