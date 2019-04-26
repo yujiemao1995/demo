@@ -24,12 +24,11 @@ and predict the outcome of a game by using the previous statistics of the NBA ga
 In this lab environment, I will use python's pandas, numpy, scipy and sklearn libraries.
 <h2>Code construct</h2>
 <h3>Insert experimental related modules</h3>
-<p># -*- coding:utf-8 -*-
-import pandas as pd
-import math
-import csv
-import random
-import numpy as np
-from sklearn import cross_validation, linear_model</p>
+<p>import pandas as pd<br />
+import math<br />
+import csv<br />
+import numpy as np<br />
+from sklearn import linear_model<br />
+</p>
 
   
