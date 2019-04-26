@@ -69,5 +69,6 @@ def CalcElo(winteam, loseteam):<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseteam = rows['LTeam']<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       winelo = GetElo(winteam)<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseelo = GetElo(loseteam)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp......
 </p>
   
