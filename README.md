@@ -30,5 +30,14 @@ import csv<br />
 import numpy as np<br />
 from sklearn import linear_model<br />
 </p>
+<h3>Initialize data at the very beginning, read data from T, O, and M tables, and remove some extraneous data</h3>
+<p>
+    pruneM = M_stat.drop(['Rk', 'Arena'],axis = 1)<br />
+    pruneO = O_stat.drop(['Rk','G','MP'],axis = 1)<br />
+    pruneT = T_stat.drop(['Rk','G','MP'],axis = 1)<br />
+    mergeMO = pd.merge(pruneM, pruneO, how = 'left', on = 'Team')<br />
+    newstat = pd.merge(mergeMO, pruneT,  how = 'left', on = 'Team')<br />
+    return newstat.set_index('Team', drop = True, append = False)<br />
+</p>
 
   
