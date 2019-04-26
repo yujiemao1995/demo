@@ -22,4 +22,14 @@ and predict the outcome of a game by using the previous statistics of the NBA ga
   After obtaining the data, I will use each team's past game situation and Elo rating to determine the winning probability of each team. In evaluating the past matches of each team, I will use the data from the three tables of Team Per Game Stats, Opponent Per Game Stats and Miscellaneous Stats (hereafter referred to as T, O and M tables) as representative of the game. The characteristics of a team's game. I will eventually achieve each game and predict which team will win in the game, but it will not give an absolute victory or defeat, but the probability of winning the team. So I will build a feature vector that represents the game. The statistics of the previous match statistics (T, O and M tables) of the two teams and the respective Elo ranks of the two teams.
 <h2>Model training and prediction based on data</h2>
 In this lab environment, I will use python's pandas, numpy, scipy and sklearn libraries.
+<h2>Code construct</h2>
+<h3>Insert experimental related modules</h3>
+<p># -*- coding:utf-8 -*-
+import pandas as pd
+import math
+import csv
+import random
+import numpy as np
+from sklearn import cross_validation, linear_model</p>
+
   
