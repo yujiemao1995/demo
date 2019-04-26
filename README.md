@@ -59,4 +59,6 @@ def CalcElo(winteam, loseteam):<br />
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    R2new = round(R2 + K*(0 - E2))<br />
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   return R1new, R2new
 </p>
+<h3>Based on our initial good statistics and the Elo score calculation results of each team, we will establish a data set corresponding to each game in the 2015~2016 regular season (in the home and away games, we think the home team is more advantageous). Therefore, the home team will be given a corresponding rating of 100)</h3>
+<p>def GenerateTrainData(stat, trainresult):</p>
   
