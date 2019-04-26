@@ -91,8 +91,8 @@ def CalcElo(winteam, loseteam):<br />
 <p>
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsppre_data = pd.read_csv(folder + '/16-17Schedule.csv')<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp pre_X = GeneratePredictData(pre_data, teamstat)<br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  pre_y = limodel.predict_proba(pre_X)<br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  predictlist = []<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp pre_y = limodel.predict_proba(pre_X)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp predictlist = []<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp for index, rows in pre_data.iterrows():<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreslt = [rows['Vteam'], pre_y[index][0], rows['Hteam'], pre_y[index][1]]<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppredictlist.append(reslt)<br />
@@ -100,10 +100,10 @@ def CalcElo(winteam, loseteam):<br />
 </p>
 <h3>Test Code</h3>
 <p>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsppre_data = pd.read_csv(folder + '/test_Scheduledata')<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp pre_data = pd.read_csv(folder + '/test_Scheduledata')<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp test_pre_X = GeneratePredictData(test_pre_data, test_teamstat)<br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  test_pre_y = limodel.predict_proba(pre_X)<br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  test_predictlist = []<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp test_pre_y = limodel.predict_proba(pre_X)<br />
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp test_predictlist = []<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp for index, rows in test_pre_data.iterrows():<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptest_reslt = [rows['Vteam'], test_pre_y[index][0], rows['Hteam'], test_pre_y[index][1]]<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptest_predictlist.append(test_reslt)<br />
