@@ -40,9 +40,9 @@ from sklearn import linear_model<br />
     return newstat.set_index('Team', drop = True, append = False)<br />
 </p>
 <h3>Get the Elo Score rating function for each team, and Define the Elo grade function for each team</h3>
-<p>assign it to the initial base_elo value when there is no rating at the beginning.
+<p>assign it to the initial base_elo value when there is no rating at the beginning.<br />
 def GetElo(team):<br />
-&nbsp    try:<br />
+&nbsp&nbsp&nbsp    try:<br />
 &nbsp        return team_elos[team]<br />
 &nbsp    except:<br />
 &nbsp        team_elos[team] = init_elo<br />
