@@ -59,7 +59,7 @@ def CalcElo(winteam, loseteam):<br />
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    R2new = round(R2 + K*(0 - E2))<br />
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   return R1new, R2new
 </p>
-<h3>Generate TrainData</h3>
+<h3>Generate TrainData and predictData</h3>
 <p>
   Based on our initial good statistics and the Elo score calculation results of each team, we will establish a data set corresponding to each game in the 2015~2016 regular season (in the home and away games, we think the home team is more advantageous). Therefore, the home team will be given a corresponding rating of 100)<br />
   def GenerateTrainData(stat, trainresult):<br />
@@ -72,5 +72,14 @@ def CalcElo(winteam, loseteam):<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        loseelo = GetElo(loseteam)<br />
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp......
 </p>
-<h3>Finally, these data processing functions are called in the main function, and the regression model is built using sklearn's Logistic Regression method.</h3>
-<p></p>
+<h3>Call these data handlers in the main function and build a regression model using sklearn's Logistic Regression method.</h3>
+<p>if __name__ == '__main__':<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp M_stat = pd.read_csv(folder + '/15-16Miscellaneous_Stat.csv')<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp O_stat = pd.read_csv(folder + '/15-16Opponent_Per_Game_Stat.csv')<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbspT_stat = pd.read_csv(folder + '/15-16Team_Per_Game_Stat.csv')<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbspteam_result = pd.read_csv(folder + '/2015-2016_result.csv')<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp teamstat = PruneData(M_stat, O_stat, T_stat)<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp X,y = GenerateTrainData(teamstat, team_result)<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp limodel = linear_model.LogisticRegression()<br />
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp limodel.fit(X,y)<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...</p>
