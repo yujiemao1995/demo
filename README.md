@@ -93,5 +93,8 @@ def CalcElo(winteam, loseteam):<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreslt = [rows['Vteam'], pre_y[index][0], rows['Hteam'], pre_y[index][1]]<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppredictlist.append(reslt)<br />
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp print(predictlist) <br />   
-
 </p>
+<h2>In conclusion</h2>
+<p>I use some of the statistics of Basketball-reference.com to calculate Elo socre for each NBA team, and use these basic statistics to evaluate each team's past matches, and to use the Elo Score to fight the team according to the international ranking method. Grading the grades, and finally combining the characteristics of these different teams to determine which team can take advantage in a game. But in my predictions, unlike the past, I did not give the absolute positive and negative points, but the probability that the team with the larger odds can win the other party.<br />
+However, the amount of data I use to evaluate the performance of a team is still too small (only 15 to 16 years of data is used). If you want more accurate and systematic judgment, you can get it from various statistical websites. More years, more comprehensive data.<br />
+In addition, because each team has player trades and injuries every year, especially the changes of star players may greatly affect the entire team's Elo Score, which is difficult for us to predict.<br /></p>
