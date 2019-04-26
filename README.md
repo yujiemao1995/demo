@@ -42,21 +42,21 @@ from sklearn import linear_model<br />
 <h3>Get the Elo Score rating function for each team, and Define the Elo grade function for each team</h3>
 <p>assign it to the initial base_elo value when there is no rating at the beginning.<br />
 def GetElo(team):<br />
-&nbsp&nbsp&nbsp    try:<br />
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        return team_elos[team]<br />
-&nbsp&nbsp&nbsp    except:<br />
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        team_elos[team] = init_elo<br />
-&nbsp&nbsp&nbsp   return team_elos[team]<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    try:<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        return team_elos[team]<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    except:<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        team_elos[team] = init_elo<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   return team_elos[team]<br />
 def CalcElo(winteam, loseteam):<br />
-&nbsp&nbsp&nbsp    R1 = GetElo(winteam)<br />
-&nbsp&nbsp&nbsp   R2 = GetElo(loseteam)<br />
-&nbsp&nbsp&nbsp    E1 = 1/(1 + math.pow(10,(R2 - R1)/400))<br />
-&nbsp&nbsp&nbsp    E2 = 1/(1 + math.pow(10,(R1 - R2)/400)) <br />  
-&nbsp&nbsp&nbsp    if R1>=2400:K=16<br />
-&nbsp&nbsp&nbsp    elif R1<=2100:K=32<br />
-&nbsp&nbsp&nbsp    else: K=24<br />
-&nbsp&nbsp&nbsp    R1new = round(R1 + K*(1 - E1))<br />
-&nbsp&nbsp&nbsp    R2new = round(R2 + K*(0 - E2))<br />
-&nbsp&nbsp&nbsp   return R1new, R2new
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    R1 = GetElo(winteam)<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   R2 = GetElo(loseteam)<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    E1 = 1/(1 + math.pow(10,(R2 - R1)/400))<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    E2 = 1/(1 + math.pow(10,(R1 - R2)/400)) <br />  
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    if R1>=2400:K=16<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    elif R1<=2100:K=32<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    else: K=24<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    R1new = round(R1 + K*(1 - E1))<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    R2new = round(R2 + K*(0 - E2))<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   return R1new, R2new
 </p>
   
