@@ -39,5 +39,25 @@ from sklearn import linear_model<br />
     newstat = pd.merge(mergeMO, pruneT,  how = 'left', on = 'Team')<br />
     return newstat.set_index('Team', drop = True, append = False)<br />
 </p>
+<h3>Get the Elo Score rating function for each team, and Define the Elo grade function for each team</h3>
+<p>assign it to the initial base_elo value when there is no rating at the beginning.
+def GetElo(team):
+&nbsp    try:
+&nbsp        return team_elos[team]
+&nbsp    except:
+&nbsp        team_elos[team] = init_elo
+&nbsp    return team_elos[team]
+def CalcElo(winteam, loseteam):
+&nbsp    R1 = GetElo(winteam)
+&nbsp   R2 = GetElo(loseteam)
+&nbsp    E1 = 1/(1 + math.pow(10,(R2 - R1)/400))
+&nbsp    E2 = 1/(1 + math.pow(10,(R1 - R2)/400))   
+&nbsp    if R1>=2400:K=16
+&nbsp    elif R1<=2100:K=32
+&nbsp    else: K=24
+&nbsp    R1new = round(R1 + K*(1 - E1))
+&nbsp    R2new = round(R2 + K*(0 - E2))
+&nbsp    return R1new, R2new
+</p>
 
   
