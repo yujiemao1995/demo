@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Jun  4 16:19:16 2017
 
-@author: dc
-"""
 
 import pandas as pd 
 import math
